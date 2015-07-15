@@ -1,3 +1,4 @@
+// genetic algorithm to solve 8 queens problem
 package main
 
 import (
@@ -13,18 +14,18 @@ type Chromosome struct {
 	mutant  bool
 }
 
-var poolSize = 250
-var totalGenerations = 10000
-var mutationRate = 0.002
-var crossoverRate = 0.75
-
-var pool = make([]Chromosome, poolSize)
-var newPool = make([]Chromosome, poolSize)
-var mutationRateInt = int(mutationRate * 1000)
-var crossoverRateInt = int(crossoverRate * 1000)
-var maxFitness = 0
-
-var totalFitness int
+var (
+	poolSize = 250
+	totalGenerations = 10000
+	mutationRate = 0.002
+	crossoverRate = 0.75
+	pool = make([]Chromosome, poolSize)
+	newPool = make([]Chromosome, poolSize)
+	mutationRateInt = int(mutationRate * 1000)
+	crossoverRateInt = int(crossoverRate * 1000)
+	maxFitness = 0
+	totalFitness int
+)
 
 func main() {
 
